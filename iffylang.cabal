@@ -1,0 +1,77 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 91f018cf6b747421dcf711cab16acb98a799d457f0da2b8dab30dc871408c0d1
+
+name:           iffylang
+version:        0.1.0.0
+synopsis:       Short description of your package
+description:    Please see the README on Github at <https://github.com/githubuser/iffylang#readme>
+homepage:       https://github.com/githubuser/iffylang#readme
+bug-reports:    https://github.com/githubuser/iffylang/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2017 Author name here
+license:        BSD3
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/iffylang
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5.0
+      ,array
+      ,unbound-generics
+      ,haskeline
+      ,mtl
+      ,containers
+  build-tools:
+      alex
+      ,happy
+  exposed-modules:
+      Lib
+      ,Grammar
+      ,Lexer
+      ,Exp
+      ,Eval
+      ,Pretty
+      ,Queue
+      ,Repl
+  other-modules:
+      Paths_iffylang
+  default-language: Haskell2010
+
+executable iffylang-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , iffylang
+  other-modules:
+      Paths_iffylang
+  default-language: Haskell2010
+
+test-suite iffylang-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , iffylang
+  other-modules:
+      Paths_iffylang
+  default-language: Haskell2010
