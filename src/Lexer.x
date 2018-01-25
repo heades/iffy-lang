@@ -17,9 +17,9 @@ tokens :-
     app                         { \s -> TokenApp }
     to                          { \s -> TokenTo }
     let                         { \s -> TokenLet }
-    ":s"                        { \s -> TokenShowAST }
-    ":u"                        { \s -> TokenUnFold }
-    ":d"                        { \s -> TokenDump }
+    ":s" | ":show"              { \s -> TokenShowAST }
+    ":u" | ":unfold"            { \s -> TokenUnFold }
+    ":d" | ":dump"              { \s -> TokenDump }
     $alpha [$alpha $digit]*     { \s -> TokenVar s}
     &                           { \s -> TokenAnd }
     \|                          { \s -> TokenOr }

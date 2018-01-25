@@ -133,9 +133,10 @@ handleCMD s =
 helpMenu :: String                          
 helpMenu = 
       "-----------------------------------------------------------------------------------\n"++
-      "                  The Core Grady Help Menu                                         \n"++
+      "                  The Iffy-Lang Help Menu                                         \n"++
       "-----------------------------------------------------------------------------------\n"++
       ":help             (:h)  Display the help menu\n"++
+      ":quit             (:q)  Quit Iffy-Lang\n"++
       ":show <term>      (:s)  Display the Abstract Syntax Type of a term\n"++
       ":unfold <term>    (:u)  Unfold the expression into one without toplevel definition.\n"++ 
       ":dump             (:d)  Display the context\n"++
