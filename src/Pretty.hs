@@ -34,7 +34,7 @@ prettyPrinter (And x y) = do
 prettyPrinter (App x y) = do
     a <- prettyPrinter x
     b <- prettyPrinter y
-    return $ "app "++a++" to "++b
+    return $ "app "++"("++a++")"++" to "++"("++b++")"
         
 prettyPrinter (Var x) = return $ name2String x    
 prettyPrinter b = return $ show b
